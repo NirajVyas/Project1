@@ -29,7 +29,6 @@ get 'logout', to: 'sessions#destroy', as: 'destroy_session'
 get "home", to: 'artists#index'
 
 
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
