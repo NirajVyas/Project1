@@ -1,0 +1,32 @@
+HOME
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @artist.age %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @artist.city %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @artist.genre %>
+</p>
+
+<p>
+  <%= link_to image_tag(@artist.profile_picture.url), @artist.profile_picture.url %>
+
+</p>
+
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>

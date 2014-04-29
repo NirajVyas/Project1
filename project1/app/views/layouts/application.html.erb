@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project1</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "homestyle.css" %>
+ </head>
+<body>
+
+  <!-- SCM Music Player http://scmplayer.net -->
+<script type="text/javascript" src="http://scmplayer.net/script.js" 
+data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','showplaylist':false,'playlist':[]}" ></script>
+<!-- SCM Music Player script end -->
+
+  <div class="wrap">
+  
+  <nav>
+    <ul class="menu">
+      <li><a href="home"> <span class="iconic home"></span> Home</a></li>
+
+      <li><a href="#"><span class="iconic plus-alt"></span> Discover</a>
+      </li>
+      <% if current_user %>
+      <li><a href="#"><span class="iconic magnifying-glass"></span> Featured</a>
+       
+      </li>
+      <%end%>
+
+      <li><a href="#"><span class="iconic mail"></span> Genres</a>
+        <ul>
+          <li><a href="#">Hip Hop</a></li>
+          <li><a href="#">Pop</a></li>
+          <li><a href="#">Other</a></li>
+
+        </ul>
+      </li>    
+
+  <div class="wave"> </div>
+
+      <% if current_user %>
+        <li><a href="/settings"><span class="iconic mail"></span> Settings</a>
+        </li> 
+      <% end %>
+
+    </ul>
+
+<% if current_user %>
+hello, <%= current_user.email %>
+  <%= link_to 'logout', destroy_session_path(0), method: :delete%>
+<% else %>
+    <%=link_to 'Signup', new_artist_path %>
+  <%=link_to 'login', new_session_path %>
+<% end %>
+    <div class="clearfix"></div>
+
+
+  </nav> 
+  </div>
+
+<!--   <div class="wrapper"> </div>
+ -->
+<%= yield %>
+
+<%= javascript_include_tag "application" %>
+</body>
+</html>
