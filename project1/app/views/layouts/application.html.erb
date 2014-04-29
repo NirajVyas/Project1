@@ -17,12 +17,14 @@ data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle
   
   <nav>
     <ul class="menu">
-      <li><a href="home"> <span class="iconic home"></span> Home</a></li>
+      <li><%= link_to current_user do %>
+            <span class="iconic home"></span> Home
+        <% end %></li>
 
       <li><a href="#"><span class="iconic plus-alt"></span> Discover</a>
       </li>
       <% if current_user %>
-      <li><a href="#"><span class="iconic magnifying-glass"></span> Featured</a>
+      <li><a href="featured"><span class="iconic magnifying-glass"></span> Featured</a>
        
       </li>
       <%end%>
@@ -38,9 +40,9 @@ data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle
 
   <div class="wave"> </div>
 
-      <% if current_user %>
-        <li><a href=""><span class="iconic mail"></span> Settings</a>
-        </li> 
+      <li><%= link_to current_user do %>
+        <span class="iconic mail"></span> Settings
+      </li> 
       <% end %>
 
     </ul>

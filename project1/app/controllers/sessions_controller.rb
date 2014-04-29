@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
 
       flash[:notice] ='Logged in successfully'
-      redirect_to "/featured"
+      redirect_to "/artists/featured"
     else
       flash.now.alert = "Inavlid email or password"
       render 'new'

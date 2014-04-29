@@ -1,5 +1,6 @@
 Project1::Application.routes.draw do
   # resources :users
+get "/artists/featured", to: 'artists#featured'
 
 
   resources :homes
@@ -24,7 +25,7 @@ resources :sessions, only: [:new, :create, :destroy]
 get 'logout', to: 'sessions#destroy', as: 'destroy_session'
 # destroy_session_path
 
-get "featured", to: 'artists#featured'
+
 get "home", to: 'artists#index'
 
 

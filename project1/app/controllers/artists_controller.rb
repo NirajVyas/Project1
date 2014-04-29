@@ -14,9 +14,8 @@ class ArtistsController < ApplicationController
 
   def show
     @artist = Artist.find(params[:id])
-
-    respond_to do |format|
-      format.html { redirect_to artist_path(@artist)}
+      respond_to do |format|
+      format.html # show.html.erb
       format.json { render json: @artist }
     end
   end
