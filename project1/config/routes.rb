@@ -24,7 +24,7 @@ resources :sessions, only: [:new, :create, :destroy]
 get 'logout', to: 'sessions#destroy', as: 'destroy_session'
 # destroy_session_path
 
-get "featured", to: 'users#featured'
+get "featured", to: 'artists#featured'
 get "home", to: 'artists#index'
 
 
