@@ -73,4 +73,12 @@ class ArtistsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+def featured
+
 end
+
+end
+
+

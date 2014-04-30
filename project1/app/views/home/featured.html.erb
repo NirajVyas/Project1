@@ -1,48 +1,4 @@
-HOME
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @artist.name %>
-</p>
-
-<p>
-  <b>Age:</b>
-  <%= @artist.age %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @artist.city %>
-</p>
-
-<p>
-  <b>Genre:</b>
-  <%= @artist.genre %>
-</p>
-
-<p>
-  <%= link_to image_tag(@artist.profile_picture.url), @artist.profile_picture.url %>
-
-</p>
-
-
-<%= link_to 'Back', artists_path %>
-
-
-
-
-
-
-
-<%= render partial: "songs/songs", locals: {songs: @artist.songs} %>
-
-
-
-
-
-
+<h1>Featured</h1>
 
 
 
@@ -66,7 +22,7 @@ HOME
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
-                    <%= link_to image_tag(@artist.show.url), @artist.show.url %>
+                    <img src="http://cssdeck.com/uploads/media/items/3/3yiC6Yq.jpg" />
                     <div class="description">
                         <input type="checkbox" id="show-description-1"/>
                         <label for="show-description-1" class="show-description-label">I</label>
@@ -77,8 +33,8 @@ HOME
                     </div>
                 </li>
                 <li id="slide2">
-                    <%= link_to image_tag(@artist.show2.url), @artist.show2.url %>                
-                        <div class="description">
+                    <img src="http://cssdeck.com/uploads/media/items/4/40Ly3VB.jpg" />
+                    <div class="description">
                         <input type="checkbox" id="show-description-2"/>
                         <label for="show-description-2" class="show-description-label">I</label>
                         <div class="description-text">
@@ -88,8 +44,8 @@ HOME
                     </div>
                 </li>
                 <li id="slide3">
-                        <%= link_to image_tag(@artist.show3.url), @artist.show3.url %>
-                        <div class="description">
+                    <img src="http://cssdeck.com/uploads/media/items/0/00kih8g.jpg" />
+                    <div class="description">
                         <input type="checkbox" id="show-description-3"/>
                         <label for="show-description-3" class="show-description-label">I</label>
                         <div class="description-text">
@@ -99,8 +55,8 @@ HOME
                     </div>
                 </li>
                 <li id="slide4">
-                        <%= link_to image_tag(@artist.show4.url), @artist.show4.url %>
-                        <div class="description">
+                    <img src="http://cssdeck.com/uploads/media/items/2/2rT2vdx.jpg" />
+                    <div class="description">
                         <input type="checkbox" id="show-description-4"/>
                         <label for="show-description-4" class="show-description-label">I</label>
                         <div class="description-text">
@@ -110,8 +66,8 @@ HOME
                     </div>
                 </li>
                 <li id="slide5">
-                        <%= link_to image_tag(@artist.show5.url), @artist.show5.url %>
-                        <div class="description">
+                    <img src="http://cssdeck.com/uploads/media/items/8/8k3N3EL.jpg" />
+                    <div class="description">
                         <input type="checkbox" id="show-description-5"/>
                         <label for="show-description-5" class="show-description-label">I</label>
                         <div class="description-text">
@@ -123,3 +79,5 @@ HOME
             </ul>
         </div>
     </div>
+
+     

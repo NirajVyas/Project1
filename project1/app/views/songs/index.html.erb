@@ -1,9 +1,8 @@
-<h1>Listing songs</h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Year</th>
+    <p><th>Title</th></p>
+    <p><th>Year</th></p>
     <th>Filename</th>
     <!-- <th></th> -->
     <th></th>
@@ -12,26 +11,7 @@
   </tr>
 
  
-
-<% @songs.each do |song| %>
-  <tr>
-    <td><%= song.title %></td>
-    <td><%= song.year %></td>
-<!--     <td><%= song.filename %></td> -->
-    <td>
-      <button class="song" 
-        data-title="<%= song.title %>"
-        data-filename="<%= song.filename %>"
-      >
-        Add to Playlist
-      </button>
-    </td>
-    <td><%= link_to 'Show', song %></td>
-    <td><%= link_to 'Edit', edit_song_path(song) %></td>
-    <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<%= render partial: "songs", locals: {songs: @songs} %>
 
 <br />
 

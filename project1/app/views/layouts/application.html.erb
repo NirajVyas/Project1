@@ -23,11 +23,14 @@ data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle
             <span class="iconic home"></span> Home
         <% end %></li>
 
-      <li><a href=""><span class="iconic plus-alt"></span> Discover</a>
+      <li><%= link_to artists_path  do %>
+          <span class="iconic plus-alt"></span> Discover
+          <% end %>
       </li>
       <% if current_user %>
-      <li><a href="featured"><span class="iconic magnifying-glass"></span> Featured</a>
-       
+       <li> <%= link_to '/featured' do %>
+      <span class="iconic magnifying-glass"></span> Featured
+        <% end %>
       </li>
       <%end%>
 
@@ -41,10 +44,11 @@ data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle
       </li>    
 
   <div class="wave"> </div>
-
+      <% if current_user %>
       <li><%= link_to current_user do %>
         <span class="iconic mail"></span> Settings
       </li> 
+      <% end %>
       <% end %>
 
     </ul>
@@ -62,10 +66,15 @@ hello, <%= current_user.email %>
   </nav> 
   </div>
 
-<!--   <div class="wrapper"> </div>
- -->
-<%= yield %>
+  <div class="wrapper"> 
 
-<%= javascript_include_tag "application" %>
+          <%= yield %>
+
+          <%= javascript_include_tag "application" %>
+
+
+  </div>
+
+
 </body>
 </html>

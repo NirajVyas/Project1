@@ -1,7 +1,7 @@
 Project1::Application.routes.draw do
   # resources :users
-get "/artists/featured", to: 'artists#featured'
-
+get "featured", to: 'home#featured'
+get "artists_discover", to: 'artists#discover'
 
   resources :homes
 
