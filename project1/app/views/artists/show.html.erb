@@ -1,11 +1,8 @@
-HOME
-
-<p id="notice"><%= notice %></p>
 
 <p>
   <b>Name:</b>
   <%= @artist.name %>
-</p>
+</p></p>
 
 <p>
   <b>Age:</b>
@@ -28,16 +25,16 @@ HOME
 </p>
 
 
-<%= link_to 'Back', artists_path %>
+<%#= link_to 'Back', artists_path %>
 
 
 
+<p> Songs </p>  
 
 
-
-
-<%= render partial: "songs/songs", locals: {songs: @artist.songs} %>
-
+<p>
+<%= render partial: "shared/songs", locals: {songs: @artist.songs} %>
+</p>
 
 
 

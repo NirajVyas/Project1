@@ -45,7 +45,7 @@ data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle
 
   <div class="wave"> </div>
       <% if current_user %>
-      <li><%= link_to current_user do %>
+      <li><%= link_to edit_artist_path(current_user) do %>
         <span class="iconic mail"></span> Settings
       </li> 
       <% end %>
