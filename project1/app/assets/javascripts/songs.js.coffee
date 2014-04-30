@@ -5,6 +5,7 @@
 $(document).ready ()->
   $('.song').on 'click', ()->
     title = $(this).data 'title'
-    url = $(this).data 'filename'
+    # url = $(this).data 'filename'
+    url = "http://www.buymixtapes.com/members/mixtapes/dj_clue-clue_tv/04%20Juelz%20Santana%20Ft%20Skull%20Gang-Skull%20Gang%20Got%20Money.mp3"
     console.log(url);
-    SCM.queue({ title: title, url: 'localhost:3000'+url });
+    SCM.queue({ title: title, url: url });

@@ -6,11 +6,13 @@ get "artists_discover", to: 'artists#discover'
   resources :homes
 
 
-  resources :comments
+
 
   # resources :sessions
 
-  resources :songs
+  resources :songs do
+    resources :comments
+  end
 
 
   resources :artists

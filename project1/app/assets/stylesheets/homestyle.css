@@ -1,6 +1,6 @@
 body {
-  background-color: #efefef;
-
+/*  background-color: #efefef;
+*/
 }
 
 .lovesound_image {
@@ -62,7 +62,11 @@ body {
   height: 25px;
 }
 
-
+.user_background {
+  z-index: -1;
+  clear: both;
+  display: none;
+}
 
 
 

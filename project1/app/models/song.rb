@@ -4,4 +4,5 @@ class Song < ActiveRecord::Base
   mount_uploader :filename, SoundUploader
 
   belongs_to :artist
+  has_many :comments
 end

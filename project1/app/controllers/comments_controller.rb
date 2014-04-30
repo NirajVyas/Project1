@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
   # GET /comments/new.json
   def new
     @comment = Comment.new
-
+    @comment.song = Song.find(params[:song_id])
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @comment }
@@ -41,10 +41,12 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(params[:comment])
+    @comment.song_id = params[:song_id]
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        @song = Song.find(params[:song_id])
+        format.html { redirect_to [@song, @comment], notice: 'Comment was successfully created.' }
         format.json { render json: @comment, status: :created, location: @comment }
       else
         format.html { render action: "new" }
@@ -60,7 +62,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to [@comment.song, @comment], notice: 'Comment was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -19,9 +19,9 @@
   <%= @artist.genre %>
 </p>
 
-<p>
-  <%= link_to image_tag(@artist.profile_picture.url), @artist.profile_picture.url %>
+<p> 
 
+  <%= link_to image_tag(@artist.profile_picture.thumb.url), @artist.profile_picture.detail.url %> 
 </p>
 
 

@@ -21,7 +21,7 @@ class CommentsControllerTest < ActionController::TestCase
       post :create, comment: { comment: @comment.comment }
     end
 
-    assert_redirected_to comment_path(assigns(:comment))
+    assert_redirected_to song_comment_path(assigns(:comment))
   end
 
   test "should show comment" do
@@ -36,7 +36,7 @@ class CommentsControllerTest < ActionController::TestCase
 
   test "should update comment" do
     put :update, id: @comment, comment: { comment: @comment.comment }
-    assert_redirected_to comment_path(assigns(:comment))
+    assert_redirected_to song_comment_path(assigns(:comment))
   end
 
   test "should destroy comment" do
@@ -44,6 +44,6 @@ class CommentsControllerTest < ActionController::TestCase
       delete :destroy, id: @comment
     end
 
-    assert_redirected_to comments_path
+    assert_redirected_to song_comments_path
   end
 end

@@ -1,4 +1,4 @@
-<%= form_for(@comment) do |f| %>
+<%= form_for [@comment.song, @comment] do |f| %>
   <% if @comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
@@ -15,10 +15,15 @@
     <%= f.label :comment %><br />
     <%= f.text_area :comment %>
   </div>
+
+  <div class="field">
+    <%= current_user_id.comment.artist_id.name %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
 
 
 <%#= render partial: "comments", locals: {comments: @comments} %>

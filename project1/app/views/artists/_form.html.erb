@@ -57,11 +57,18 @@
     <%= f.file_field :show5 %>
   </div>
 
+   <div class="field">
+    <%= f.label :background %><br />
+    <%= f.file_field :background %>
+  </div>
+
 <div class="songs">
 
-<%= render partial: "shared/songs", locals: {songs: @artist.songs} %>
+  <%= render partial: "shared/songs", locals: {songs: @artist.songs} %>
 
 </div>
+
+<%=link_to 'Add songs', new_song_path %>
 
   
   <div class="actions">
