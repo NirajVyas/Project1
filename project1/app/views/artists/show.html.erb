@@ -1,7 +1,7 @@
 
 
- <div class="name"> <%= @artist.name %> </div>
-  <div class="name"> <%= @artist.email %> </div>
+<p> <div class="name"> <%= @artist.name %> </div></p>
+ <p>  <div class="name"> <%= @artist.email %> </div></p>
 
 
 
@@ -108,20 +108,6 @@
 
 
 
-<p>
-  <b>Age:</b>
-  <%= @artist.age %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @artist.city %>
-</p>
-
-<p>
-  <b>Genre:</b>
-  <%= @artist.genre %>
-</p>
 
 
   <div class="user_background">   <%= link_to image_tag(@artist.background.url) %></div>

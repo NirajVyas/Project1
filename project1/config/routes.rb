@@ -11,7 +11,7 @@ Project1::Application.routes.draw do
   root to: "home#index"
   get 'login', to: 'sessions#new'
   resources :sessions, only: [:new, :create, :destroy]
-  get 'logout', to: 'sessions#destroy', as: 'destroy_session'
+  delete 'logout', to: 'sessions#destroy', as: 'destroy_session'
   get "home", to: 'artists#index'
 
 

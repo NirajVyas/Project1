@@ -18,18 +18,18 @@
  
 
 
-
   
 <% @artists.each do |artist| %>
- 
-    <%= artist.name %>
-    <%= artist.age %>
-    <%= artist.city %>
-    <%= artist.genre %>
+ <div class="span3">
+
+   <p> <%= artist.name %>
+    <%= artist.age %></p>
+    <p><%= artist.city %></p>
+   <p> <%= artist.genre %></p>
 
     <%= link_to 'Show', artist %>
-    
+    </div>
+
 <% end %>
 
 <br />
-

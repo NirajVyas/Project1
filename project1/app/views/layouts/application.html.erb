@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "homestyle.css" %>
   <%= stylesheet_link_tag "featured.css" %>
+    <%= stylesheet_link_tag "bootstrap.css" %>
+
   <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
  </head>
@@ -32,14 +34,7 @@
       </li>
       <%end%>
 
-      <li><a href="#"><span class="iconic mail"></span> Genres</a>
-        <ul>
-          <li><a href="#">Hip Hop</a></li>
-          <li><a href="#">Pop</a></li>
-          <li><a href="#">Other</a></li>
-
-        </ul>
-      </li>    
+      
 
   <div class="wave"> </div>
       <% if current_user %>

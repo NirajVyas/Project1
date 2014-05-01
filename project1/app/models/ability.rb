@@ -13,6 +13,7 @@ class Ability
         can :read, Song
         can :update, Artist, id: user.id
         can :manage, Song, artist_id: user.id 
+        can :create, Artist, id: user.id
         can :destroy, Comment, song: {artist_id: user.id}
 
     end

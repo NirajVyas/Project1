@@ -177,6 +177,8 @@ width: 600px;
 .name {
   font-size: 60px;
   font-family: 'Fjalla One', sans-serif;
+  background-color: white;
+  display: inline-block;
   }
 
 .bio {
@@ -191,6 +193,7 @@ width: 600px;
   margin-left: 400px;
 }
 
-span {
-  width: 50px;
+.span3 {
+  width: 120px;
+  border: 2px solid black;
 }
