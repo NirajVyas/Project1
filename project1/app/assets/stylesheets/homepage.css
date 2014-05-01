@@ -1,3 +1,4 @@
+
 .lovesound {
   content:url(/assets/lovesound.png);
   text-align: center;
@@ -14,9 +15,20 @@
   clear: both;
   display: inline-block;
   z-index: -1;
-  margin-left: 5px;
+  margin-left: 300px;
   margin-top: -5px;
 }
+
+
+
+.love{
+    content:url(/assets/love_sound2.png);
+      display: inline-block;
+      margin-bottom: 300px;
+
+
+}
+
 
 .signuppage {
   margin-top: -16px;
@@ -76,7 +88,7 @@ background: -o-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 10
 background: -ms-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
 background: linear-gradient(to bottom,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 );
-
+text-align: center;
 }
 
 .signupform {
@@ -105,7 +117,9 @@ border: 2px solid black;
   background: rgb(255,168,76);
   width: 970px;
   display: inline-block;
-
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+  text-align: center;
 
 background: -moz-linear-gradient(top,  rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,168,76,1)), color-stop(100%,rgba(255,123,13,1)));
@@ -187,13 +201,96 @@ width: 600px;
   border: 2px solid black;
   z-index: 2;
   font-family: helvetica;
+    background-color: white;
+
 }
 
 .search {
-  margin-left: 400px;
+  margin-left: 290px;
+  margin-top: 20px;
 }
 
 .span3 {
-  width: 120px;
+  width: 320px;
   border: 2px solid black;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 40px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 15px;
+
+  background: -moz-linear-gradient(top,  rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,168,76,1)), color-stop(100%,rgba(255,123,13,1)));
+background: -webkit-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+background: -o-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+background: -ms-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+background: linear-gradient(to bottom,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 );
+  
+
 }
+
+body.page-id-4 {
+    background-color: #3f444a !important;
+}
+
+
+.stage {
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    content:url(/assets/stage.jpg);
+    width: 100%
+
+}
+
+.loginspeaker {
+    z-index: -10;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    content:url(/assets/login_speaker.png);
+    width: 100%;
+    height: 100%;
+
+}
+
+
+body.page-id-5 {
+    background-color: #3f444a !important;
+    color: black;
+      font-family: 'Fjalla One', sans-serif;
+
+}
+
+.optimal {
+    content:url(/assets/optimal_settings.png);
+    z-index: 20;
+    margin-left: 450px;
+    margin-bottom: 100px;
+    display: inline-block;
+    clear: both;
+}
+
+.animated_text {
+  color: white;
+        font-family: 'Fjalla One', sans-serif;
+        text-align: center;
+        margin-left: 130px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

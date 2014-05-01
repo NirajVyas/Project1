@@ -4,16 +4,24 @@
   <title>Love Music</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "text" %>
+
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "homestyle.css" %>
   <%= stylesheet_link_tag "featured.css" %>
-    <%= stylesheet_link_tag "bootstrap.css" %>
+  <%= stylesheet_link_tag "bootstrap.css" %>
 
+
+
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
  </head>
 <body>
 
+
+
+<div class="beta"> </div>
 
   <div class="wrap">
   
@@ -36,7 +44,6 @@
 
       
 
-  <div class="wave"> </div>
       <% if current_user %>
       <li><%= link_to edit_artist_path(current_user) do %>
         <span class="iconic mail"></span> Settings
@@ -64,6 +71,8 @@ hello, <%= current_user.email %>
 
   </nav> 
   </div>
+
+
 
   <div class="wrapper"> 
 

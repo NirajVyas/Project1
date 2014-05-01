@@ -1,5 +1,7 @@
+<div class="loginspeaker"> </div>
 
-  <div class="loginform">
+
+    <div class="loginform"?
 
     <p><h1>Log in</h1></p>
     
@@ -7,12 +9,10 @@
       <div class="form-group">
 
       <div class="field">
-        <%= label_tag :email %>
-        <%= text_field_tag :email, params[:email] %>
+        <%= text_field_tag :email, params[:email], :placeholder => "Email" %>
       </div>
       <div class="field">
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
+        <%= password_field_tag :password, :value => "password" %>
       </div>
 
     </div>
@@ -20,4 +20,6 @@
     <% end %>
 
     <p> Don't have an account? Sign up <%=link_to 'here', new_artist_path %>. </p>  
-  </div>
+
+</div>
+
