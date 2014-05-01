@@ -97,13 +97,16 @@
 </div>
 
 
-<p> Songs </p>  
+
 
     <div class ="view_songs">
 <p>
 <%= render partial: "shared/songs", locals: {songs: @artist.songs} %> 
 </p>
+
     </div>
+
+
 
 <p>
   <b>Age:</b>
@@ -121,5 +124,5 @@
 </p>
 
 
-  <div class="user_background">   <%= link_to image_tag(@artist.background.url), @artist.background.url %></div>
+  <div class="user_background">   <%= link_to image_tag(@artist.background.url) %></div>
 

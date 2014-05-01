@@ -18,7 +18,6 @@ body {
 
 .wrapper {
   width: 980px;
-  height: 900px;
   margin: 0 auto;
   z-index: -1;
   clear: both;
@@ -72,9 +71,14 @@ body {
 }
 
 
+.sound_icon {
+  content:url(/assets/sound_icon.png);
+  display: inline-block;
+}
 
-
-
+.songs {
+  border: 2px, solid, black;
+}
 
 
 
