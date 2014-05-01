@@ -15,6 +15,9 @@ Comment: <% @song.comments.each do |comment| %>
         <p> <%= comment.artist.name %> </p> 
 
         <p> <%= comment.comment %> </p> 
+        <%= link_to 'Edit Comment', edit_song_comment_path(@song, comment) %> |
+        <%= link_to 'Delete Comment', song_comment_path(@song, comment), method: :delete %> 
+
 
         <% end %>
 

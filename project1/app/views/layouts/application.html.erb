@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project1</title>
+  <title>Love Music</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "homestyle.css" %>
   <%= stylesheet_link_tag "featured.css" %>
@@ -11,10 +12,6 @@
  </head>
 <body>
 
-  <!-- SCM Music Player http://scmplayer.net -->
-<script type="text/javascript" src="http://scmplayer.net/script.js" 
-data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','showplaylist':false,'playlist':[]}" ></script>
-<!-- SCM Music Player script end -->
 
   <div class="wrap">
   
@@ -57,7 +54,7 @@ data-config="{'skin':'skins/black/skin.css','volume':51,'autoplay':true,'shuffle
 
 <% if current_user %>
 hello, <%= current_user.email %>
-  <%= link_to 'logout', destroy_session_path(0), method: :delete%>
+  <%= link_to 'logout', destroy_session_path, method: :delete%>
 <% else %>
   <div class="signuppage">
     <%=link_to 'Signup', new_artist_path %>
@@ -76,9 +73,6 @@ hello, <%= current_user.email %>
   <div class="wrapper"> 
 
           <%= yield %>
-
-          <%= javascript_include_tag "application" %>
-
 
   </div>
 

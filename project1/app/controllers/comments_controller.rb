@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+   authorize_resource
+
   before_filter :get_song
 
   # GET /comments
@@ -79,16 +81,14 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-
-    respond_to do |format|
-      format.html { redirect_to comments_url }
-      format.json { head :no_content }
-    end
+    redirect_to @song
   end
-end
+
 
 private
 
 def get_song
   @song = Song.find(params[:song_id])
+end
+
 end

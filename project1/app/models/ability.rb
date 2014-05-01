@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
 
-    user ||= User.new
+    user ||= Artist.new
 
     if user.role? :admin
         can :manage, :all
@@ -11,11 +11,14 @@ class Ability
         can :read, Artist
         can :read, Comment
         can :read, Song
+        can :update, Artist, id: user.id
+        can :manage, Song, artist_id: user.id 
+        can :destroy, Comment, song: {artist_id: user.id}
 
     end
 
 
-  def initialize(user)
+  # def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
