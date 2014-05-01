@@ -12,6 +12,8 @@
 
 Comment: <% @song.comments.each do |comment| %>
         <p> <%= comment.created_at %> </p>
+        <p> <%= comment.artist.name %> </p> 
+
         <p> <%= comment.comment %> </p> 
 
         <% end %>

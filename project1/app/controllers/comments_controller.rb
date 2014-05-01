@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_filter :get_song
+
   # GET /comments
   # GET /comments.json
   def index
@@ -42,11 +44,12 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @comment.song_id = params[:song_id]
+    @comment.artist = current_user  
 
     respond_to do |format|
       if @comment.save
         @song = Song.find(params[:song_id])
-        format.html { redirect_to [@song, @comment], notice: 'Comment was successfully created.' }
+        format.html { redirect_to @song, notice: 'Comment was successfully created.' }
         format.json { render json: @comment, status: :created, location: @comment }
       else
         format.html { render action: "new" }
@@ -82,4 +85,10 @@ class CommentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+end
+
+private
+
+def get_song
+  @song = Song.find(params[:song_id])
 end

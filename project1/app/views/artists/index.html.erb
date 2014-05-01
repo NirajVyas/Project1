@@ -1,6 +1,24 @@
 
 
-<h1>Listing artists</h1>
+<div class="listing_artist">  <h1>Current active artists</h1>
+
+<div class="search">
+
+<%= search_form_for @q do |f| %>
+  <%= f.label :Search_for_artist %>
+  <%= f.text_field :name_cont %>
+  
+  <%= f.submit %>
+
+<% end %> 
+
+</div>
+
+</div>
+ 
+  <div class="registered_artist">
+
+
 
 <table>
   <tr>
@@ -8,8 +26,10 @@
     <th> Age </th>
     <th> City </th>
     <th> Genre </th>
-  
+
   </tr>
+
+  
 <% @artists.each do |artist| %>
   <tr>
     <td><%= artist.name %></td>
@@ -22,6 +42,7 @@
   </tr>
 <% end %>
 </table>
+  </div>
 
   
 

@@ -17,13 +17,14 @@ body {
 
 
 .wrapper {
-  background: #cecece;
   width: 980px;
   height: 900px;
   margin: 0 auto;
   z-index: -1;
   clear: both;
-  margin-top: 65px;
+  margin-top: 115px;
+
+  
 }
 
 #login {
@@ -63,18 +64,12 @@ body {
 }
 
 .user_background {
-  z-index: -1;
-  clear: both;
-  display: none;
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -135,6 +130,8 @@ nav {
   position: fixed;
   margin-left: 229px;
   width: 980px;
+  margin-top: 20px;
+  z-index: 3;
 }
 
 .menu li {

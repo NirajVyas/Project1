@@ -1,34 +1,18 @@
 Project1::Application.routes.draw do
-  # resources :users
-get "featured", to: 'home#featured'
-get "artists_discover", to: 'artists#discover'
-
-  resources :homes
-
-
-
-
-  # resources :sessions
+  get "/featured", to: 'home#featured'
+  get "artists_discover", to: 'artists#discover'
 
   resources :songs do
     resources :comments
   end
 
-
   resources :artists
 
   root to: "home#index"
-
-# httpverb url, to: 'controller#method', as: 'alias'
-
-get 'login', to: 'sessions#new'
-resources :sessions, only: [:new, :create, :destroy]
-
-get 'logout', to: 'sessions#destroy', as: 'destroy_session'
-# destroy_session_path
-
-
-get "home", to: 'artists#index'
+  get 'login', to: 'sessions#new'
+  resources :sessions, only: [:new, :create, :destroy]
+  get 'logout', to: 'sessions#destroy', as: 'destroy_session'
+  get "home", to: 'artists#index'
 
 
   # The priority is based upon order of creation:

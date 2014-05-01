@@ -1,48 +1,17 @@
 
-<p>
-  <b>Name:</b>
-  <%= @artist.name %>
-</p></p>
 
-<p>
-  <b>Age:</b>
-  <%= @artist.age %>
-</p>
+ <div class="name"> <%= @artist.name %> </div>
+  <div class="name"> <%= @artist.email %> </div>
 
-<p>
-  <b>City:</b>
-  <%= @artist.city %>
-</p>
 
-<p>
-  <b>Genre:</b>
-  <%= @artist.genre %>
-</p>
 
-<p> 
-
+<div class="profile_pic">
   <%= link_to image_tag(@artist.profile_picture.thumb.url), @artist.profile_picture.detail.url %> 
+</div>
 </p>
 
 
-<%#= link_to 'Back', artists_path %>
-
-
-
-<p> Songs </p>  
-
-
-<p>
-<%= render partial: "shared/songs", locals: {songs: @artist.songs} %>
-</p>
-
-
-
-
-
-
-
-
+    <div class="slidshow_layout">
 
     <div id="slideshow-wrap">
         <input type="radio" id="button-1" name="controls" checked="checked"/>
@@ -120,3 +89,37 @@
             </ul>
         </div>
     </div>
+
+</div>
+
+<div class ="bio">
+<%= @artist.bio %>
+</div>
+
+
+<p> Songs </p>  
+
+    <div class ="view_songs">
+<p>
+<%= render partial: "shared/songs", locals: {songs: @artist.songs} %> 
+</p>
+    </div>
+
+<p>
+  <b>Age:</b>
+  <%= @artist.age %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @artist.city %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @artist.genre %>
+</p>
+
+
+  <div class="user_background">   <%= link_to image_tag(@artist.background.url), @artist.background.url %></div>
+
