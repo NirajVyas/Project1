@@ -1,4 +1,6 @@
 Project1::Application.routes.draw do
+
+  get "/beta", to: "home#beta", as: 'beta'
   get "/featured", to: 'home#featured'
   get "artists_discover", to: 'artists#discover'
 

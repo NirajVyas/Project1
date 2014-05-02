@@ -11,15 +11,11 @@
 </p>
 
 Comment: <% @song.comments.each do |comment| %>
-        <p> <%= comment.created_at %> </p>
-        <p> <%= comment.artist.name %> </p> 
+        <%= comment.created_at %> 
+        <%= comment.artist.name %>  
 
-        <p> <%= comment.comment %> </p> 
-        <%= link_to 'Edit Comment', edit_song_comment_path(@song, comment) %> |
-        <%= link_to 'Delete Comment', song_comment_path(@song, comment), method: :delete %> 
-
-
-        <% end %>
+     <div class="comment">   <p> <%= comment.comment %> </p>  </div>
+      
 
   <audio controls>
   <source src="<%= @song.filename %>" type="audio/ogg">
@@ -27,7 +23,11 @@ Comment: <% @song.comments.each do |comment| %>
 </audio>
   <a href="<%= @song.filename %>"> Download Audio </a>
 
+  <p><%= link_to 'Edit Comment', edit_song_comment_path(@song, comment) %> 
+     <%= link_to 'Delete Comment', song_comment_path(@song, comment), method: :delete %> </p>
 
+
+        <% end %>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>

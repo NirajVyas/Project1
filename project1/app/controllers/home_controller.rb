@@ -3,8 +3,12 @@ class HomeController < ApplicationController
    
   end
 
-def featured
+  def featured
 
-end
+  end
+
+  def beta
+
+  end
 
 end

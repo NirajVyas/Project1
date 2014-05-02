@@ -96,7 +96,7 @@ text-align: center;
   display: inline-block;
   padding: 5px;
   border-radius: 10px;
-  height: 200px;
+  height: 100%;
   margin-top: 50px;
   margin-left: 380px; 
   background: rgb(255,168,76);
@@ -268,18 +268,37 @@ body.page-id-5 {
 
 .optimal {
     content:url(/assets/optimal_settings.png);
-    z-index: 20;
+    /*z-index: 20;
     margin-left: 450px;
     margin-bottom: 100px;
     display: inline-block;
-    clear: both;
+    clear: both;*/
+    float: left;
+    width: 50%;
 }
 
+.clear{
+  width: 100%;
+  clear: both;
+  float: left;
+}
+
+.bottom-links{
+  width: 100%;
+}
 .animated_text {
   color: white;
         font-family: 'Fjalla One', sans-serif;
         text-align: center;
         margin-left: 130px;
+
+}
+
+
+.broken {
+  content:url(/assets/broken2.png);
+  position: fixed;    
+
 
 }
 

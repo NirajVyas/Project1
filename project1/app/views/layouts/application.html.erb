@@ -4,7 +4,6 @@
   <title>Love Music</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "text" %>
 
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "homestyle.css" %>
@@ -20,8 +19,9 @@
 <body>
 
 
-
-<div class="beta"> </div>
+<%= link_to beta_path do %>
+  <div class="beta"></div>
+<% end %>
 
   <div class="wrap">
   
