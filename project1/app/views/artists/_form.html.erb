@@ -44,78 +44,44 @@
 
   <div class="field">
     <%= f.label :bio %><br />
-    <%= f.text_area :bio, :rows => "10", :cols => "160"%>
+    <%= f.text_area :bio, :rows => "10", :cols => "160", :required => true%>
   </div>
   
 
 <div class="show_editing">
   <div class="fields">
     <div class="field">
-      <%= f.label :show %><br />
+      <%= f.label :Image_1 %><br />
       <%= f.file_field :show %>
     </div>
     <div class="field">
-      <%= f.label :show2 %><br />
+      <%= f.label :Image_2 %><br />
       <%= f.file_field :show2 %>
     </div>
     <div class="field">
-      <%= f.label :show3 %><br />
+      <%= f.label :Image_3 %><br />
       <%= f.file_field :show3 %>
     </div>
     <div class="field">
-      <%= f.label :show4 %><br />
+      <%= f.label :Image_4 %><br />
       <%= f.file_field :show4 %>
     </div>
     <div class="field">
-      <%= f.label :show5 %><br />
+      <%= f.label :Image_5 %><br />
       <%= f.file_field :show5 %>
     </div>
 
-
+<br/>
 
      <div class="field">
-      <%= f.label :background %><br />
+      <%= f.label :background_wallpaper %><br />
       <%= f.file_field :background %>
-
-      <FORM>
-        <FONT FACE="VERDANA, ARIAL"><B>Choose a background color:</B></FONT> 
-        <SELECT name="ccGround" size="1" onChange=(document.bgColor=ccGround.options[ccGround.selectedIndex].value)>
-        <OPTION value="408080" target="1" selected>Cool Green
-        <OPTION value="C0C0C0" target="1">Cool Grey
-        <OPTION value="000000" target="1">Black
-        <OPTION value="730200" target="1">DarkRed
-        <OPTION value="231800" target="1">Brown
-        <OPTION value="044302" target="1">DarkGreen
-        <OPTION value="0D09A3" target="1">Dark Blue
-        <OPTION value="808040" target="1">Avocado
-        <OPTION value="800080" target="1">Purple
-        <OPTION value="444444" target="1">Gray
-        <OPTION value="FF0400" target="1">Red
-        <OPTION value="EFE800" target="1">Yellow
-        <OPTION value="05EF00" target="1">Green
-        <OPTION value="0206FF" target="1">Blue
-        <OPTION value="AE08EF" target="1">Violet
-        <OPTION value="FF8C8A" target="1">Mauve
-        <OPTION value="FF80FF" target="1">Pink
-        <OPTION value="FFCCCC" target="1">Peach
-        <OPTION value="FFCC99" target="1">Orange
-        <OPTION value="000080" target="1">Darker Blue
-        <OPTION value="808080" target="1">Dark Grey
-        <OPTION value="D5CCBB" target="1">Tan
-        <OPTION value="DDDDDD" target="1">LightGray
-        <OPTION value="FBFF73" target="1">Light Yellow
-        <OPTION value="7CFF7D" target="1">LightGreen
-        <OPTION value="A6BEFF" target="1">Light Blue
-        <OPTION value="FFFFFF" target="1">White
-        </SELECT></FORM></CENTER>
-    </div>
-
 
 
 
   </div>
 
-  <div class="optimal"> </div>
+  <div class="optimal">  </div>
 
   <div class="clear"></div>
 
@@ -124,15 +90,20 @@
     <%= render partial: "shared/songs", locals: {songs: @artist.songs} %>
 
   </div>
+  <br/>
   <div class="bottom-links">
   <%=link_to 'Add songs', new_song_path %>
+  </div>
+  <br/>
+  <br/>
 
-    
+    <br />
     <div class="actions">
       <%= f.submit %>
     </div>
-  <% end %>
-  </div>
-</div>
+    <br/>
+    <br/>
 
+  <% end %>
+</div>
 

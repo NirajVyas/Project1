@@ -14,10 +14,6 @@
 <% end %> 
 
 </div>
-
- 
-
-
   
 <% @artists.each do |artist| %>
  <div class="span3">
@@ -27,7 +23,7 @@
     <p><%= artist.city %></p>
    <p> <%= artist.genre %></p>
 
-    <%= link_to 'Show', artist %>
+   <div class="show_link"> <%= link_to 'Show', artist %> </div>
     </div>
 
 <% end %>

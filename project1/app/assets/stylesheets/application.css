@@ -21,3 +21,8 @@
   width: 100px;
   height: auto;
 }
+
+.show_link {
+  border: 2px solid black;
+  background-color: white;
+}
