@@ -3,34 +3,38 @@
 
 <% songs.each do |song| %>
   <div class="songs">
+<table>
+    <tr>
 
-    <div id="itunes_image"> <img src="/assets/itunes.png" height="42" width="42"> </div>
+   <td> <div id="itunes_image"> <img src="/assets/itunes.png" height="42" width="42"> </div> </td>
 
-    <div id="song_title"> <%= song.title %>  </div>
+   <td> <div id="song_title">&nbsp&nbsp <%= song.title %>  </div></td>
 
-    <div id="song_year"> <%= song.year %> </div>
+   <td> <div id="song_year">&nbsp&nbsp <%= song.year %> </div></td>
+
+
+
+
    
-      <button class="song" 
-        data-title="<%= song.title %>"
-        data-filename="<%= song.filename %>">
-
-        Add to Playlist
-      </button> 
-
-
-    <%= link_to 'Show', song %>
-    <%= link_to 'Edit', edit_song_path(song) %>
-    <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-
-    <audio controls>
-        <source src="<%= song.filename %>" type="audio/ogg">
-        Your browser does not support the audio element.
-    </audio>
 
 
 
+     <td>&nbsp&nbsp<%= link_to 'Edit', edit_song_path(song) %> </td>
+     <td>&nbsp&nbsp<%= link_to 'Delete', song, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp&nbsp</td>
 
+        <td> <p></p>
+           <p><audio controls>
+            <source src="<%= song.filename %>" type="audio/ogg">
+            Your browser does not support the audio element.
+           </audio></p>
+        </td>
+
+</tr>
+   </table>
+    
+
+
+  
 
 
 <% end %>

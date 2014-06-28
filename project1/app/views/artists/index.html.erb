@@ -1,15 +1,15 @@
 <div class="stage"> </div>
 
-<div class="listing_artist"> Discover your DJ</div>
-
+<div class="listing_artist"> 
+<p class="bg-primary">Discover your DJ</p>
+</div>
 
 <div class="search">
 
 <%= search_form_for @q do |f| %>
-  <%= f.label :Search_for_artist %>
-  <%= f.text_field :name_cont %>
+  <p><%= f.text_field :name_cont, :placeholder => "Search for an artist via name" %></p>
   
-  <%= f.submit %>
+  <p><%= f.submit %></p>
 
 <% end %> 
 
@@ -21,7 +21,7 @@
   
 <% @artists.each do |artist| %>
  <div class="span3">
-
+     <div class="artist_profile">  <img src="<%= artist.profile_picture.thumb %>"> </div>
 
    <p> <%= artist.name %> </p>
     <p><%= artist.city %></p>

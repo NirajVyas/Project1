@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+
+.song {
+  background-color: white;
+}
+
+.artist_profile {
+  width: 100px;
+  height: auto;
+}
