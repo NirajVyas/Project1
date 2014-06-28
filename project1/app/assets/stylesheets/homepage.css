@@ -140,8 +140,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', end
 }
 
 .songs {
-  outline: thin solid black;
-width: 100%}
+  width: 800px;
+  border: 2px solid black;
+}
 
 #song_title {
   font-weight: bold;
@@ -185,12 +186,15 @@ width: 600px;
   border: 2px solid black;
   z-index: 2;
   font-family: helvetica;
-    background-color: white;
+  background-color: white;
+}
 
+.home_image {
+  text-align: center;
 }
 
 .search {
-  margin-left: 0%;
+  margin-left: 20%;
   margin-top: 20px;
 }
 

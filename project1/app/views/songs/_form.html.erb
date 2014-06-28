@@ -13,17 +13,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => "Title" %>
   </div>
+  <br/>
+  <br/>
+  <br/>
+
   <div class="field">
-    <%= f.label :year %><br />
-    <%= f.number_field :year %>
+    <%= f.number_field :year, :placeholder => "Year" %>
   </div>
+  <br/>
+  <br/>
+  <br/>
+
   <div class="field">
-    <%= f.label :filename %><br />
     <%= f.file_field :filename %>
   </div>
+  <br/>
+  <br/>
+  <br/>
   <div class="actions">
     <%= f.submit %>
   </div>

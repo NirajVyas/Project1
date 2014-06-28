@@ -14,39 +14,55 @@
     </div>
   <% end %>
 
+<br/>
 
   <div class="field">
-    <%= f.label :name %>   
     <%= f.text_field :name, :required => true, :placeholder => "Name" %>
   </div>
+  <br/>
+  <br/>
+  <br/>
   <div class="field">
-    <%= f.label :age %>
     <%= f.number_field :age, :required => true, :placeholder => "Age" %>
   </div>
+  <br/>
+  <br/>
+  <br/>
   <div class="field">
-    <%= f.label :city %>
     <%= f.text_field :city, :required => true, :placeholder => "City" %>
   </div>
+  <br/>
+  <br/>
+  <br/>
   <div class="field">
     <%= f.label :genre %>
-    <%= f.select :genre, options_for_select(["Rap", "Pop" ])%>
+    <%= f.select :genre, options_for_select(["Rap", "Pop", "Rock", "Jazz", "Soul", "Punk", "Mix" ])%>
   </div>
+  <br/>
+  <br/>
+  <br/>
    <div class="field">
-    <%= f.label :email %>     <%= f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+       <%= f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
   </div>
-
-
+  <br/>
+  <br/>
+  <br/>
    <div class="field">
     <%= f.label :profile_picture %><br />
     <%= f.file_field :profile_picture %>
   </div>
-
-
+  <br/>
+  <br/>
+  <br/>
   <div class="field">
     <%= f.label :bio %><br />
     <%= f.text_area :bio, :rows => "10", :cols => "160", :required => true%>
   </div>
-  
+  <br/>
+  <br/>
+  <br/>
+
+  <p> Choose 5 images to show on your profile page </p>
 
 <div class="show_editing">
   <div class="fields">
@@ -74,17 +90,17 @@
 <br/>
 
      <div class="field">
-      <%= f.label :background_wallpaper %><br />
+      <%= f.label :background_wallpaper %>
       <%= f.file_field :background %>
-
-
-
   </div>
-
+  <br/>
+  
   <div class="optimal">  </div>
 
   <div class="clear"></div>
-
+<br/>
+  <br/>
+  <br/>
   <div class="songs">
 
     <%= render partial: "shared/songs", locals: {songs: @artist.songs} %>
