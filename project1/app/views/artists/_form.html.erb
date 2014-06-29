@@ -1,0 +1,125 @@
+<body class="home page page-id-5 page-template-default custom-background single-author singular two-column left-sidebar">
+
+
+<%= form_for(@artist) do |f| %>
+  <% if @artist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+
+      <ul>
+      <% @artist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<br/>
+
+  <div class="field">
+    <%= f.text_field :name, :required => true, :placeholder => "Name" %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div class="field">
+    <%= f.number_field :age, :required => true, :placeholder => "Age" %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div class="field">
+    <%= f.text_field :city, :required => true, :placeholder => "City" %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div class="field">
+    <%= f.label :genre %>
+    <%= f.select :genre, options_for_select(["Rap", "Pop", "Rock", "Jazz", "Soul", "Punk", "Mix" ])%>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+   <div class="field">
+       <%= f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+   <div class="field">
+    <%= f.label :profile_picture %><br />
+    <%= f.file_field :profile_picture %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio, :rows => "10", :cols => "160", :required => true%>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+
+  <p> Choose 5 images to show on your profile page </p>
+
+<div class="show_editing">
+  <div class="fields">
+    <div class="field">
+      <%= f.label :Image_1 %><br />
+      <%= f.file_field :show %>
+    </div>
+    <div class="field">
+      <%= f.label :Image_2 %><br />
+      <%= f.file_field :show2 %>
+    </div>
+    <div class="field">
+      <%= f.label :Image_3 %><br />
+      <%= f.file_field :show3 %>
+    </div>
+    <div class="field">
+      <%= f.label :Image_4 %><br />
+      <%= f.file_field :show4 %>
+    </div>
+    <div class="field">
+      <%= f.label :Image_5 %><br />
+      <%= f.file_field :show5 %>
+    </div>
+
+<br/>
+
+     <div class="field">
+      <%= f.label :background_wallpaper %>
+      <%= f.file_field :background %>
+  </div>
+  <br/>
+  
+  <div class="optimal">  </div>
+
+  <div class="clear"></div>
+<br/>
+  <br/>
+  <br/>
+  <div class="songs">
+
+    <%= render partial: "shared/songs", locals: {songs: @artist.songs} %>
+
+  </div>
+  <br/>
+  <div class="bottom-links">
+  <%=link_to 'Add songs', new_song_path %>
+  </div>
+  <br/>
+  <br/>
+
+    <br />
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <br/>
+    <br/>
+
+  <% end %>
+</div>
+
