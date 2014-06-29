@@ -1,0 +1,27 @@
+
+
+<% songs.each do |song| %>
+
+
+<div class="row">
+  <div class="col-sm-9">
+    <div id="song_title"> <%= song.title %>  </div> 
+    <div id="song_year">  <%= song.year %> </div>
+    <div class="row">
+      <div class="col-xs-8 col-sm-6">
+        <%= link_to 'Edit', edit_song_path(song) %> </td>
+        <%= link_to 'Delete', song, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      <div class="col-xs-4 col-sm-6">
+        <audio controls>
+            <source src="<%= song.filename %>" type="audio/ogg">
+            Your browser does not support the audio element.
+           </audio>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+<% end %>
+

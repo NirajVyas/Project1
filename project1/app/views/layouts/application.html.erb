@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Love Music</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "homestyle.css" %>
+  <%= stylesheet_link_tag "featured.css" %>
+  <%= stylesheet_link_tag "bootstrap.css" %>
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+ </head>
+<body>
+
+
+<%= link_to beta_path do %>
+  <div class="beta"></div>
+<% end %>
+
+<ul class="menu2">
+
+          <li><%= link_to current_user do %>
+              <span>Home</span>
+                    <% end %></li>
+
+
+          <li><%= link_to artists_path  do %>
+              <span>Discover</span>
+                      <% end %></li>
+
+               <% if current_user %>
+          <li> <%= link_to '/featured' do %>
+              <span>Featured</span>
+                      <% end %></li>
+                      <% end %>
+
+
+
+
+
+            <% if current_user %>
+          <li><%= link_to edit_artist_path(current_user) do %>
+        <span> Settings </span> 
+      <% end %>      </li> 
+      <% end %>
+
+
+                <% if current_user %> 
+          <div class="hello_user"> <li> hello, <%= current_user.email %> </li> 
+  <%= link_to 'logout', destroy_session_path, method: :delete%></div>
+  <% else %>
+    <%=link_to 'Signup', new_artist_path %>
+
+ <%=link_to 'login', new_session_path %>
+     <% end %>
+
+
+
+</ul>
+
+
+
+  <div class="wrapper"> 
+
+          <%= yield %>
+
+  </div>
+
+<br />
+<br />
+
+
+
+</body>
+</html>
