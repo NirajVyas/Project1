@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140502080057) do
+ActiveRecord::Schema.define(:version => 20140503153329) do
 
   create_table "artists", :force => true do |t|
     t.string   "name"
@@ -40,11 +40,18 @@ ActiveRecord::Schema.define(:version => 20140502080057) do
 
   create_table "comments", :force => true do |t|
     t.text     "comment"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "artist_id"
-    t.integer  "song_id"
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
+    t.string   "title",            :limit => 50, :default => ""
+    t.string   "commentable_type"
+    t.integer  "commentable_id"
+    t.integer  "user_id"
+    t.string   "role",                           :default => "comments"
   end
+
+  add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
+  add_index "comments", ["commentable_type"], :name => "index_comments_on_commentable_type"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "galleries", :force => true do |t|
     t.datetime "created_at", :null => false
