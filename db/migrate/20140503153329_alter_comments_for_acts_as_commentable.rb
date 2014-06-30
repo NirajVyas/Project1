@@ -1,4 +1,4 @@
-class CreateComments1 < ActiveRecord::Migration
+class AlterCommentsForActsAsCommentable < ActiveRecord::Migration
   def self.up
     add_column :comments, :title, :string, {limit: 50, default: ""}
     add_column :comments, :commentable_type, :string
