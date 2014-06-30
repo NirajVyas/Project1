@@ -32,7 +32,10 @@
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
+                    <% if @artist.show.url do %>
                     <%= link_to image_tag(@artist.show.url), @artist.show.url %>
+                    <% end %>
+                    <% end %>
                     <div class="description">
                         <input type="checkbox" id="show-description-1"/>
                     </div>
