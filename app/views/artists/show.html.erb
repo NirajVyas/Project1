@@ -32,34 +32,32 @@
         <div id="slideshow-inner">
             <ul>
                 <li id="slide1">
-                    <% if @artist.show.url do %>
-                    <%= link_to image_tag(@artist.show.url), @artist.show.url %>
-                    <% end %>
-                    <% end %>
+                    <%= link_to image_tag(@artist.show.thumb.url), @artist.show.detail.url %>
+                   
                     <div class="description">
                         <input type="checkbox" id="show-description-1"/>
                     </div>
                 </li>
                 <li id="slide2">
-                    <%= link_to image_tag(@artist.show2.url), @artist.show2.url %>                
+                    <%= link_to image_tag(@artist.show2.thumb.url), @artist.show2.detail.url %>                
                         <div class="description">
                         <input type="checkbox" id="show-description-2"/>
                     </div>
                 </li>
                 <li id="slide3">
-                        <%= link_to image_tag(@artist.show3.url), @artist.show3.url %>
+                        <%= link_to image_tag(@artist.show3.thumb.url), @artist.show3.detail.url %>
                         <div class="description">
                         <input type="checkbox" id="show-description-3"/>
                     </div>
                 </li>
                 <li id="slide4">
-                        <%= link_to image_tag(@artist.show4.url), @artist.show4.url %>
+                        <%= link_to image_tag(@artist.show4.thumb.url), @artist.show4.detail.url %>
                         <div class="description">
                         <input type="checkbox" id="show-description-4"/>
                     </div>
                 </li>
                 <li id="slide5">
-                        <%= link_to image_tag(@artist.show5.url), @artist.show5.url %>
+                        <%= link_to image_tag(@artist.show5.thumb.url), @artist.show5.detail.url %>
                         <div class="description">
                         <input type="checkbox" id="show-description-5"/>
                     </div>
