@@ -36,7 +36,7 @@ class ShowUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
    version :thumb do
-     process :scale => [600, 320]
+     process :resize_to_fit => [600, 320]
    end
 
    version :detail do
